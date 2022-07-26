@@ -1,15 +1,24 @@
 
 import { isEmpty } from "../helpers"
-import {
-    IRSearchDocument,
-    IRSearchErrorDocument
-} from "../interfaces"
+import { IRUserId, IRQuery } from "../interfaces"
 
-/* Search validator */
-export const Search = async (data: IRSearchDocument) => {
-    let errors: IRSearchErrorDocument = <IRSearchErrorDocument>{}
+/* Scholar user id validator */
+export const UserId = async (data: IRUserId) => {
+    let errors: IRUserId = <IRUserId>{}
 
-    if (!data.index || isEmpty(data.index)) errors.index = "Index is required."
+    if (!data.scholar_user_id || isEmpty(data.scholar_user_id)) errors.scholar_user_id = "Scholar user id is required."
+
+    return {
+        errors,
+        isValid: Object.keys(errors).length === 0
+    }
+}
+
+
+/* Scholar query validator */
+export const Query = async (data: IRQuery) => {
+    let errors: IRQuery = <IRQuery>{}
+
     if (!data.query || isEmpty(data.query)) errors.query = "Query is required."
 
     return {

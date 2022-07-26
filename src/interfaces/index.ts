@@ -1,29 +1,8 @@
 
-export interface IRDocument {
-    character: string,
-    quote: string
+export interface IRUserId {
+    scholar_user_id: string
 }
 
-export interface IRCreateDocument {
-    index: string,
-    document: IRDocument
-}
-
-export interface IRCreateErrorDocument {
-    index: string,
-    document: {
-        character?: string,
-        quote?: string
-    }
-}
-
-export interface IRSearchDocument {
-    index: string,
+export interface IRQuery {
     query: string
 }
-
-export interface IRSearchErrorDocument {
-    index?: string,
-    query?: string
-}
-

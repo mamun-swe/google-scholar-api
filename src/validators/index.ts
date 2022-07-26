@@ -1,6 +1,6 @@
 
-import * as elasticSearch from "./google-scholar.validator"
+import * as googleScholar from "./google-scholar.validator"
 
 export const validator = {
-    elasticSearch
+    googleScholar
 }
