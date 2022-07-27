@@ -1,7 +1,7 @@
 
 import { NextFunction, Request, Response } from "express"
 import { IRequestQuery } from "../interfaces"
-import { findById, findByQuery } from "../services/google-scholar.service"
+import { findById } from "../services/google-scholar.service"
 
 /* Articals by user ID */
 export const ArticalsByUserId = async (req: Request, res: Response, next: NextFunction) => {
@@ -20,11 +20,6 @@ export const ArticalsByUserId = async (req: Request, res: Response, next: NextFu
         /* Search data by scholar user ID */
         if (requestQuery.scholar_user_id) {
             results = await findById({ scholar_user_id: requestQuery.scholar_user_id })
-        }
-
-        /* Search data by scholar query */
-        if (requestQuery.query) {
-            results = await findByQuery({ query: requestQuery.query })
         }
 
         res.status(200).json({
