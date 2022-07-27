@@ -36,4 +36,4 @@ npm start
 
 ## Browse API Endpoints
 
-1. GET results [http://localhost:5000/api/v1/scholar?scholar_user_id=R4hZ8WMAAAAJ]
+1. GET results [http://localhost:5000/api/v1/scholar?scholar_user_id=R4hZ8WMAAAAJ] with your browser to see the result.
