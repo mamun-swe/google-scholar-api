@@ -1,5 +1,5 @@
 {
-  "name": "google-scholar-scraping-api",
+  "name": "google-scholar-api",
   "version": "1.0.0",
   "description": "A web scraping api how scrap data from google scholar.",
   "main": "server.ts",
