@@ -36,4 +36,4 @@ npm start
 
 ## Browse API Endpoints
 
-1. [http://localhost:5000/api/v1/scholar?scholar_user_id=R4hZ8WMAAAAJ] articals by google scholar user ID.
+1. GET results [http://localhost:5000/api/v1/scholar?scholar_user_id=R4hZ8WMAAAAJ]
