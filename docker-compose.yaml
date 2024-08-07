@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  scholarapiservice:
+    build: .
+    image: google-scholar-scrapper-image
+    container_name: google-scholar-scrapper-container
+    ports:
+      - 5000:5000
+    environment:
+      - APP_PORT=5000
+
+    networks:
+      - google-scholar-scrapper-network
+
+networks:
+  google-scholar-scrapper-network:
+    name: google-scholar-scrapper-network
+    driver: bridge
